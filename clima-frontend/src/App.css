@@ -1,0 +1,326 @@
+body {
+	background-image: url("./img/Background.png");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+body::before {
+	content: "";
+	position: absolute;
+	width: 1366px;
+	height: 768px;
+	top: 326px;
+	left: 157px;
+	border-radius: 15px;
+	opacity: 0;
+}
+
+/* Campo de Busca */
+.form-pesquisa-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+	padding-top: 50px !important;
+}
+
+/* Input */
+.input-cidade {
+	width: 490px;
+	height: 61px;
+	top: -117px;
+	left: -10px;
+	gap: 0px;
+	border-radius: 9px;
+	opacity: 0px;
+	background: #6d67d0;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	border: none;
+	padding: 0 10px;
+	box-sizing: border-box;
+	color: #c2bff4;
+}
+
+.input-cidade::placeholder {
+	width: 215px;
+	height: 24px;
+	top: -99px;
+	left: 127px;
+	gap: 0px;
+	opacity: 0px;
+	color: #c2bff4;
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	text-decoration: none;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.input-cidade:focus {
+	background: #6d67d0;
+	color: #c2bff4;
+	outline: none;
+}
+
+.imagem-tempo {
+	width: 480px;
+	height: 480px;
+	padding-top: 20px;
+	border-radius: 10px;
+	backdrop-filter: blur(20px);
+	position: relative;
+	z-index: 2;
+	gap: 0px;
+	opacity: 0px;
+}
+
+.imagem-tempo-container {
+	position: relative;
+	display: inline-block;
+}
+
+.quadrados-container {
+	display: flex;
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 3;
+	gap: 8px;
+}
+
+.quadrado {
+	width: 146.67px;
+	height: 60px;
+	padding: 12px 16px;
+	gap: 12px;
+	background: #6660c899;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	backdrop-filter: blur(0px);
+	opacity: 0px;
+}
+
+.imagem-vento,
+.imagem-umidade,
+.imagem-chuva {
+	width: 32px;
+	height: 32px;
+	opacity: 40%;
+}
+
+.dados-clima-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.titulo-umidade,
+.titulo-vento,
+.titulo-chuva {
+	font-family: "Lato", sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.4px;
+	text-align: left;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+	display: block;
+	white-space: nowrap;
+	color: #e7e6fb;
+	margin: 0;
+}
+
+.chuva,
+.umidade,
+.velocidade-vento {
+	width: 59px;
+	height: 22px;
+	gap: 0px;
+	opacity: 0px;
+	white-space: nowrap;
+	color: #e7e6fb;
+	font-weight: bold;
+	text-align: left;
+}
+
+.temperatura-no-tempo {
+	position: absolute;
+	top: 112px;
+	left: 188px;
+	gap: 4px;
+	opacity: 0px;
+	transform: translate(-50%, -50%);
+	color: #e7e6fb;
+	font-weight: bold;
+	z-index: 3;
+	width: 103px;
+	height: 106px;
+	display: flex;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	font-size: 60px;
+	top: 40%;
+	left: 50%;
+}
+
+.temperatura-no-tempo::after {
+	content: "°C";
+	font-size: 24px;
+	margin-left: 5px;
+	margin-top: -15px;
+	width: 26px;
+	height: 29px;
+	color: #dad8f7;
+	font-weight: 700;
+	text-align: center;
+	line-height: 28.8px;
+	font-family: "Lato", sans-serif;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.descricao-temperatura {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #dad8f7;
+	font-size: 16px;
+	text-align: center;
+	z-index: 4;
+}
+
+.cidade-localizacao-container {
+	position: absolute;
+	top: 70px;
+	gap: 4px;
+	z-index: 3;
+	width: 110px;
+	height: 20px;
+	left: 338px;
+	opacity: 0px;
+	font-family: "Lato", sans-serif;
+}
+
+.imagem-localizacao {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+.cidade-no-tempo {
+	color: #c2bff4;
+	font-family: "Lato", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 16.8px;
+	text-align: right;
+	text-underline-position: from-font;
+	text-decoration-skip-ink: none;
+}
+
+.imagem-weather {
+	position: absolute;
+	top: -20px;
+	left: -56px;
+	width: 176px;
+	height: 176px;
+	z-index: 2;
+	opacity: 0px;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+	.imagem-weather {
+		width: 150px;
+		height: 150px;
+		top: -15px;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 1;
+	}
+
+	.cidade-localizacao-container {
+		top: 80px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		opacity: 1;
+	}
+
+	.cidade-no-tempo {
+		font-size: 14px;
+		text-align: center;
+		opacity: 1;
+	}
+
+	.imagem-localizacao {
+		width: 18px;
+		height: 18px;
+	}
+
+	.temperatura-no-tempo {
+		font-size: 50px;
+		opacity: 1;
+	}
+}
+
+@media (max-width: 480px) {
+	.imagem-weather {
+		width: 100px;
+		height: 100px;
+		top: -10px;
+		left: 10%;
+		transform: translateX(-50%);
+		opacity: 1;
+	}
+
+	.cidade-localizacao-container {
+		top: 70px;
+		left: 80%;
+		transform: translateX(-50%);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		opacity: 1;
+	}
+
+	.cidade-no-tempo {
+		font-size: 12px;
+		text-align: center;
+		opacity: 1;
+	}
+
+	.imagem-localizacao {
+		width: 16px;
+		height: 16px;
+	}
+
+	.temperatura-no-tempo {
+		font-size: 40px;
+		opacity: 1;
+	}
+}
