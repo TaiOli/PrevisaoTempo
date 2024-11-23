@@ -1,66 +1,113 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projeto Previsão do Tempo
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descrição
 
-## About Laravel
+A aplicação **Previsão do Tempo** permite consultar as condições climáticas de uma cidade, fornecendo informações detalhadas como:
+- Temperatura
+- Descrição do clima
+- Umidade
+- Velocidade do vento
+- Chance de chuva
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+O sistema é composto por dois principais componentes:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Backend**: Desenvolvido em **Laravel (PHP)**, responsável pela lógica de processamento e integração com a API do OpenWeather.
+- **Frontend**: Criado em **React**, que exibe as informações de maneira interativa, incluindo imagens representativas do clima atual.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📋 Pré-requisitos
 
-## Learning Laravel
+Para rodar a aplicação, você precisa ter as seguintes dependências instaladas em seu ambiente de desenvolvimento:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **PHP** (versão 7.3 ou superior)
+2. **Composer** (gerenciador de dependências PHP)
+3. **Laravel** (framework PHP)
+4. **Node.js** e **npm** (para rodar o frontend React)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🚀 Como executar o projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Siga os passos abaixo para rodar a aplicação localmente:
 
-## Laravel Sponsors
+### Clone o repositório
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
 
-### Premium Partners
+git clone https://github.com/TaiOli/PrevisaoTempo.git
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```
+### Acesse  diretório backend clima-api e instale a dependência
 
-## Contributing
+    ```bash
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    composer install
 
-## Code of Conduct
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Acesse o diretório do frontend clima-frontend
 
-## Security Vulnerabilities
+    ```bash
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    npm install
 
-## License
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+##  Configuração da API OpenWeather
+
+Para que o sistema funcione corretamente, você precisará configurar a chave de API do OpenWeather. Siga os passos abaixo para obter e configurar a chave corretamente.
+
+### Passo 1: Obter a Chave da API
+
+1. Acesse o site do OpenWeather: [https://openweathermap.org/api](https://openweathermap.org/api).
+2. Crie uma conta e faça login.
+3. Gere uma chave de API para o serviço.
+4. Após gerar a chave, copie a chave de API, pois você precisará dela para configurar o sistema.
+
+### Passo 2: Configurar a Chave da API no Código
+
+A chave da API está atualmente **hardcoded** (inserida diretamente) no código-fonte. Para configurar a chave no seu projeto, siga as instruções abaixo:
+
+1. Abra o arquivo `app/Models/Clima.php`.
+2. Encontre a constante `CHAVE_API_OPENWEATHER`.
+
+### Substitua o valor pela chave de API que você obteve do OpenWeather.
+
+   Ele ficará no seguinte formato:
+
+   ```php
+
+   const CHAVE_API_OPENWEATHER = 'SUA_CHAVE_API';
+
+   ```
+
+## Rodando o projeto localmente
+
+### Gere uma chave de aplicação
+
+    ```bash
+
+    php artisan key:generate
+
+    ```
+
+### Inicie o servidor local:
+
+    ```bash
+
+    php artisan serve
+
+    ```
+
+### Inicie o servidor de desenvolvimento do React:
+
+ ```bash
+
+ npm start
+
+ ```
+
+Isso iniciará o servidor de desenvolvimento React. Por padrão, ele estará disponível em http://localhost:3000.
+
+
+## Desenvolvedora
+
+Tais Oliveira
+
