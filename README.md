@@ -36,19 +36,19 @@ git clone https://github.com/TaiOli/PrevisaoTempo.git
 ```
 ### Acesse  diretório backend clima-api e instale a dependência
 
-    ```bash
+```bash
 
-    composer install
+composer install
 
-    ```
+```
 
 ### Acesse o diretório do frontend clima-frontend
 
-    ```bash
+```bash
 
-    npm install
+npm install
 
-    ```
+```
 
 ##  Configuração da API OpenWeather
 
@@ -72,37 +72,37 @@ A chave da API está atualmente **hardcoded** (inserida diretamente) no código-
 
    Ele ficará no seguinte formato:
 
-   ```php
+```php
 
-   const CHAVE_API_OPENWEATHER = 'SUA_CHAVE_API';
+const CHAVE_API_OPENWEATHER = 'SUA_CHAVE_API';
 
-   ```
+```
 
 ## Rodando o projeto localmente
 
 ### Gere uma chave de aplicação
 
-    ```bash
+```bash
 
-    php artisan key:generate
+php artisan key:generate
 
-    ```
+```
 
 ### Inicie o servidor local:
 
-    ```bash
+```bash
 
-    php artisan serve
+php artisan serve
 
-    ```
+```
 
 ### Inicie o servidor de desenvolvimento do React:
 
- ```bash
+```bash
 
  npm start
 
- ```
+```
 
 Isso iniciará o servidor de desenvolvimento React. Por padrão, ele estará disponível em http://localhost:3000.
 
