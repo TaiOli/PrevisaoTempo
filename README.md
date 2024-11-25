@@ -18,10 +18,11 @@ O sistema é composto por dois principais componentes:
 
 Para rodar a aplicação, você precisa ter as seguintes dependências instaladas em seu ambiente de desenvolvimento:
 
-1. **PHP** (versão 7.3 ou superior)
-2. **Composer** (gerenciador de dependências PHP)
-3. **Laravel** (framework PHP)
-4. **Node.js** e **npm** (para rodar o frontend React)
+1. **PHP** (versão 7.3 ou superior) ![PHP](https://img.shields.io/badge/PHP-Active-brightgreen.svg)
+2. **Composer** (gerenciador de dependências PHP) ![Composer](https://img.shields.io/badge/Composer-Active-brightgreen.svg)
+3. **Laravel** (framework PHP) ![Laravel](https://img.shields.io/badge/Laravel-Active-brightgreen.svg)
+4. **Node.js** e **npm** (para rodar o frontend React) ![Node.js](https://img.shields.io/badge/Node.js-Active-brightgreen.svg) ![NPM](https://img.shields.io/badge/NPM-Active-brightgreen.svg)
+5. **Bootstrap** (para o layout e design responsivo) ![Bootstrap](https://img.shields.io/badge/Bootstrap-Active-brightgreen.svg)
 
 ## 🚀 Como executar o projeto
 
@@ -70,7 +71,7 @@ A chave da API está atualmente **hardcoded** (inserida diretamente) no código-
 1. Abra o arquivo `app/Models/Clima.php`.
 2. Encontre a constante `CHAVE_API_OPENWEATHER`.
 
-### Substitua o valor pela chave de API que você obteve do OpenWeather.
+### Passo 3: Substitua o valor pela chave de API que você obteve do OpenWeather.
 
    Ele ficará no seguinte formato:
 
