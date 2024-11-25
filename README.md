@@ -34,6 +34,8 @@ Siga os passos abaixo para rodar a aplicação localmente:
 git clone https://github.com/TaiOli/PrevisaoTempo.git
 
 ```
+O repositório esta dividido em dois diretórios: clima-api (backend) e clima-frontend (frontend)
+
 ### Acesse  diretório backend clima-api e instale a dependência
 
 ```bash
@@ -78,6 +80,9 @@ const CHAVE_API_OPENWEATHER = 'SUA_CHAVE_API';
 
 ```
 
+**Importante!** Para melhorar a segurança e proteger informações, a chave da API do OpenWeather, é recomendado armazená-la no arquivo .env, em vez de deixá-la no código-fonte. Dessa forma, você pode garantir que essa chave não seja compartilhada em repositórios públicos.
+Além disso, ao usar o .env, você pode adicionar o arquivo ao .gitignore, o que impede que ele seja versionado no controle de versão, mantendo suas credenciais privadas.
+
 ## Rodando o projeto localmente
 
 ### Gere uma chave de aplicação
@@ -104,7 +109,8 @@ php artisan serve
 
 ```
 
-Isso iniciará o servidor de desenvolvimento React. Por padrão, ele estará disponível em http://localhost:3000.
+Ao executar o comando php artisan irá iniciar o servidor backend, que estará disponível por padrão em http://localhost:8000.
+Quando executar o comando npm start no frontend, o React iniciará no http://localhost:3000.
 
 
 ## Desenvolvedora
