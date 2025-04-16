@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import "../../css/app.css";
 import TemperatureImage from "../img/Temperature-Now.png";
 import ImageVento from "../img/image-1.png";
 import ImageUmidade from "../img/image-2.png";
